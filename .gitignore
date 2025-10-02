@@ -1,0 +1,40 @@
+# --- Firebase Credentials ---
+# IMPORTANT: This file contains sensitive private keys. Never commit it to git.
+firebase_key.json
+
+# --- Python & Virtual Environment ---
+# Ignore the virtual environment folder
+venv/
+.venv/
+env/
+.env
+
+# Ignore Python cache files and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore package distribution and build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# --- Flask ---
+# Ignore the instance folder which can hold sensitive config
+instance/
+
+# --- IDE & Editor Configuration ---
+# Visual Studio Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# --- Operating System Files ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

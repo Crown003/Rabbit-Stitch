@@ -1,0 +1,312 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500;700&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+    --color-primary: #C4B4A9; 
+    --color-secondary: #EAE3DC; 
+    --color-dark: #5C5C5C; 
+    --color-light: #F9F6F2; 
+    --color-footer: #A7B0B2; 
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Raleway', sans-serif;
+    --border-radius: 5px;
+}
+
+/* --- Base & Reset Styles --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    line-height: 1.2;
+}
+
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.2rem; }
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Button Styles --- */
+.btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added subtle shadow */
+}
+
+/* Corrected .button-1 to .btn-1 */
+.btn-1 {
+    background-color: var(--color-primary);
+    color: white;
+}
+.btn-1:hover {
+    background-color: #a2948a;
+    transform: translateY(-2px); /* Added hover effect */
+}
+
+.btn-2 {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+}
+.btn-2:hover {
+    background-color: #d8cdc2;
+    transform: translateY(-2px); /* Added hover effect */
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-dark);
+    border: 2px solid var(--color-secondary);
+}
+.btn-outline:hover {
+    background-color: var(--color-secondary);
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: var(--color-light);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-secondary);
+}
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo svg {
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+.logo-text h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.logo-text span {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+.main-nav a {
+    font-weight: 500;
+}
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+.mobile-nav-toggle { display: none; }
+
+/* --- Hero Section (Renamed from .class1) --- */
+.hero-section {
+    background-image: linear-gradient(rgba(249, 246, 242, 0.5), rgba(249, 246, 242, 0.5)), url('https://images.unsplash.com/photo-1549062572-5447684692a5?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+}
+.hero-section h2 {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+.hero-section-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* --- Features Section --- */
+.features {
+    padding: 80px 0;
+    background-color: white;
+}
+/* Corrected selector from .features-section to .features */
+.features h3 {
+    max-width: 500px;
+    margin: 0 auto 50px;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--color-primary);
+}
+.feature-icon svg {
+    width: 28px;
+    height: 28px;
+}
+.feature-item h4 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    padding: 80px 0;
+    background-color: var(--color-secondary);
+}
+.cta-section p {
+    max-width: 500px;
+    margin: 20px auto 30px;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--color-footer);
+    color: white;
+    padding: 60px 0 20px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+.footer-col h4 {
+    color: white;
+    margin-bottom: 15px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+.footer-col p {
+    opacity: 0.8;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+.footer-col ul a {
+    color: white;
+    opacity: 0.8;
+}
+.footer-col ul a:hover {
+    opacity: 1;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    
+    .main-nav, .header-buttons {
+        display: none;
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 2px;
+        background: var(--color-dark);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: var(--color-dark);
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger::before { top: -8px; }
+    .hamburger::after { bottom: -8px; }
+
+    .features-grid, .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-grid {
+        text-align: center;
+    }
+
+    .hero-section-buttons {
+        flex-direction: column;
+    }
+}

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account - Rabbit & Stitch</title>
     
-    <link rel="stylesheet" href="signup.css">
+     <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+
 </head>
 <body>
 
@@ -32,7 +33,7 @@
             <h2>Create Account</h2>
 
 
-            <form id="signup-form">
+            <form id="signup-form" action="/signup" method="POST">
                 <div class="input-group">
                     <input type="text" id="username" name="username" placeholder="username" required>
                 </div>
@@ -64,6 +65,6 @@
     </div>
     
     
-    <script src="signup.js"></script>
+    <script src="{{ url_for('static', filename='signup.js') }}"></script>
 </body>
 </html>

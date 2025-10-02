@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rabbit & Stitch - Home</title>
-    
-    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 
 </head>
+
 <body>
 
 
 
 
 
-    
+
     <header class="main-header">
 
 
@@ -35,19 +37,12 @@
                 <a href="#contact">Contact</a>
             </nav>
             <div class="header-buttons">
-                
-                <a href="signup.html" class="btn btn-1">Sign Up</a>
-                <a href="login.html" class="btn btn-2">Login</a>
+                <a href="{{ url_for('signup') }}" class="btn btn-1">Sign Up</a>
+                <a href="{{ url_for('login') }}" class="btn btn-2">Login</a>
             </div>
-           
+
         </div>
-       </Section
-       
-
-
-
-
-    </header> 
+        </Section </header>
 
 
 
@@ -59,58 +54,59 @@
 
 
 
-    <main>
-        
-        <sectionalsection class="class1">
-            <div class="container">
-                <h2>Create stunning fashion designs digitally with our intuitive tools.</h2>
-                <div class="class1-buttons">
-                    <button class="btn btn-1">Start Designing</button>
-                    <button class="btn btn-outline">Watch Demo</button>
-                </div>
-            </div>
-        </section>
+        <main>
 
-        
-
-
-
-        <section id="features" class="features">
-            <div class="container text-center">
-                <h3>We help makers build & launch ideas that you love </h3>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <img src="something">
-                        </div>
-                        <h4>Design</h4>
-                        <p> no idea abhi kya likhna h </p>                  
-                    </div>
-
-
-
-                    <div class="feature-item">
-                         <div class="feature-icon">
-                            <img src="something">
-                        </div>
-                        <h4>Collaborate</h4>
-                        <p>yaha bhi nhi pta kya likhna h abhi </p>
-                    </div>
-
-
-
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                           <img src="something" >
-                        </div>
-                        <h4>Launch</h4>
-                        <p>again no idea will write in future</p>
+            <sectionalsection class="class1">
+                <div class="container">
+                    <h2>Create stunning fashion designs digitally with our intuitive tools.</h2>
+                    <div class="class1-buttons">
+                        <button class="btn btn-1">Start Designing</button>
+                        <button class="btn btn-outline">Watch Demo</button>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-        
+                </section>
+
+
+
+
+
+                <section id="features" class="features">
+                    <div class="container text-center">
+                        <h3>We help makers build & launch ideas that you love </h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <img src="{{ url_for('static', filename='images/design-icon.png') }}"
+                                        alt="Design Icon">
+                                </div>
+                                <h4>Design</h4>
+                                <p> no idea abhi kya likhna h </p>
+                            </div>
+
+
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <img src="something">
+                                </div>
+                                <h4>Collaborate</h4>
+                                <p>yaha bhi nhi pta kya likhna h abhi </p>
+                            </div>
+
+
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <img src="something">
+                                </div>
+                                <h4>Launch</h4>
+                                <p>again no idea will write in future</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </main>
+
 
 
 
@@ -124,9 +120,7 @@
                 <button class="btn btn-primary">Get Started For Free &rarr;</button>
             </div>
         </section>
-    </main>
-
-    
+        </main>
 
 
 
@@ -140,55 +134,58 @@
 
 
 
-    <footer id="contact" class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>RABBIT & STITCH</h4>
-                    <p>Empowering users with digital tools for creative expression.</p>
+
+
+        <footer id="contact" class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>RABBIT & STITCH</h4>
+                        <p>Empowering users with digital tools for creative expression.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ABOUT US</h4>
+                        <ul>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HELP</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>KEEP IN TOUCH</h4>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Pinterest</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h4>ABOUT US</h4>
-                    <ul>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>HELP</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>KEEP IN TOUCH</h4>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Pinterest</a></li>
-                    </ul>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Rabbit & Stitch. All rights reserved.</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rabbit & Stitch. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    
+        </footer>
 
 
 
 
 
-    <script src="home.js"></script>
+
+
+        <script src="{{ url_for('static', filename='home.js') }}"></script>
 
 
 
 
 
 </body>
+
 </html>

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rabbit & Stitch - Home</title>
     
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    
 </head>
 <body>
 
@@ -26,7 +27,7 @@
             <h2>LOGIN</h2>
 
 
-            <form id="login-form">
+            <form id="login-form" action="/login" method="POST">
                 <div class="input-group">
                     <input type="text" id="username" name="username" placeholder="username" required>
                 </div>
@@ -66,7 +67,7 @@
 
 
     
-    <script src="login.js"></script>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
 
 
 </body>
